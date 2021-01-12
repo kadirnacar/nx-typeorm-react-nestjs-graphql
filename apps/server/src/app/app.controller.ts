@@ -12,6 +12,7 @@ export class AppController {
 
   @Get()
   async getData() {
+    console.log("deneme")
     return `There are ${await this.repoService.messageRepo.count()} existent messages`;
   }
 

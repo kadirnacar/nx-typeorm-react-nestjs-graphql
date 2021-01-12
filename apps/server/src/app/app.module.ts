@@ -10,7 +10,7 @@ import { RepoModule } from './repo/repo.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: <any>environment.db.type,
+      type: "sqlite",
       database: environment.db.database,
       entities: getMetadataArgsStorage().tables.map(tbl => tbl.target),
       synchronize: true
