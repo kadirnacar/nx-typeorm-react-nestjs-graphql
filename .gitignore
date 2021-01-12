@@ -106,3 +106,5 @@ dist
 
 ./data.sqlite
 data.sqlite
+./package-lock.json
+package-lock.json

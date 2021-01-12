@@ -47,16 +47,6 @@
               "apps/server/**/*.ts"
             ]
           }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/server"
-          ],
-          "options": {
-            "jestConfig": "apps/server/jest.config.js",
-            "passWithNoTests": true
-          }
         }
       }
     },
@@ -71,16 +61,6 @@
             "lintFilePatterns": [
               "libs/models/**/*.ts"
             ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/models"
-          ],
-          "options": {
-            "jestConfig": "libs/models/jest.config.js",
-            "passWithNoTests": true
           }
         }
       }
