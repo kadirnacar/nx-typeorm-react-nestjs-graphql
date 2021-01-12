@@ -104,4 +104,5 @@ dist
 .tern-port
 
 
+./data.sqlite
 data.sqlite
