@@ -1,4 +1,4 @@
-import { Field, ObjectType } from "@nestjs/graphql";
+import { Field, ObjectType, InputType } from "@nestjs/graphql";
 import {
   Column,
   CreateDateColumn,
@@ -31,4 +31,10 @@ export class User {
   // Associations
   @OneToMany(() => Message, (message) => message.userConnection)
   messageConnection: Promise<Message[]>;
+}
+
+@InputType()
+export class UserDTO {
+  @Field()
+  email: string;
 }

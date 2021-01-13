@@ -12,13 +12,12 @@ export class AppController {
 
   @Get()
   async getData() {
-    console.log("deneme")
-    return `There are ${await this.repoService.messageRepo.count()} existent messages`;
+    return this.repoService.userRepo.find();
   }
 
   @Get("/insert/:email")
   async insert(@Param() params) {
-    await this.repoService.userRepo.save({ email: params.email });
-    return `There are ${await this.repoService.messageRepo.count()} existent messages`;
+    const user = await this.repoService.userRepo.save({ email: params.email });
+    return user;
   }
 }
